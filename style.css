@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f2f7f4;
+    color: #2c3e50;
+    padding: 40px 20px;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.badge-top {
+    display: inline-block;
+    background-color: #d4ebd0;
+    color: #276749;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.header h1 {
+    font-size: 42px;
+    color: #114232;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.header p {
+    color: #557163;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.header .urdu-head {
+    font-size: 20px;
+    color: #1a4a1a;
+    font-weight: 600;
+    font-family: 'Noto Nastaliq Urdu', 'Urdu Typesetting', 'Arial Unicode MS', serif;
+    direction: rtl;
+    margin-top: 12px;
+    line-height: 1.8;
+}
+
+/* Responsive Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+/* Card Styles */
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 16px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #e8f0e8;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.08), 0 10px 10px rgba(0, 0, 0, 0.05);
+    border-color: #2a6b2a;
+}
+
+/* Image Container */
+.img-container {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 12px;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #f8fbf8;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.card:hover .img-container img {
+    transform: scale(1.08);
+}
+
+/* Category Indicator Dot */
+.indicator {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* Text Styling */
+.card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a202c;
+    margin-bottom: 2px;
+}
+
+.card-subtitle {
+    font-size: 13px;
+    color: #718096;
+    font-weight: 500;
+}
+
+.card-urdu {
+    font-size: 16px;
+    color: #1a4a1a;
+    font-family: 'Noto Nastaliq Urdu', 'Urdu Typesetting', 'Arial Unicode MS', serif;
+    direction: rtl;
+    margin-top: 4px;
+    line-height: 1.6;
+}
+
+.card-price {
+    font-size: 16px;
+    font-weight: 700;
+    color: #276749;
+    margin-top: 10px;
+    padding-top: 8px;
+    border-top: 1px dashed #d4ebd0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-price .rupee {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.card-price .per-kg {
+    font-size: 11px;
+    font-weight: 500;
+    color: #718096;
+}
+
+/* Responsive */
+@media (max-width: 550px) {
+    body {
+        padding: 24px 12px;
+    }
+    
+    .header h1 {
+        font-size: 28px;
+    }
+    
+    .header p {
+        font-size: 14px;
+    }
+    
+    .header .urdu-head {
+        font-size: 16px;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+    }
+    
+    .card {
+        padding: 12px;
+    }
+    
+    .img-container {
+        height: 110px;
+    }
+    
+    .card-title {
+        font-size: 13px;
+    }
+    
+    .card-subtitle {
+        font-size: 11px;
+    }
+    
+    .card-urdu {
+        font-size: 14px;
+    }
+    
+    .card-price {
+        font-size: 14px;
+    }
+}
